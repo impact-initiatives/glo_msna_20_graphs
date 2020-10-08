@@ -1,7 +1,7 @@
 # Radar / spider graphs
 # Installing up-to-date repositories for MSNI calculations/graphs and survey weighting
-remotes::install_github("caldwellst/msni19")
-remotes::install_github("ellieallien/surveyweights")
+remotes::install_github("impact-initiatives/msni19")
+remotes::install_github("impact-initiatives/surveyweights")
 
 # Loading in data frame and sampling frame
 df <- readr::read_csv("data/msna_data.csv")
@@ -23,9 +23,9 @@ msni19::radar_graph(df,
                             "health_index", 
                             "protection_index",
                             "wash_index"),
-                    lsg_labels = c("Education in\nEmergency",
-                                   "Emergency\nShelter\nand NFI",
-                                   "Food Security and\nAgriculture",
+                    lsg_labels = c("Education",
+                                   "Shelter\nand NFI",
+                                   "Food \nSecurity",
                                    "Health",
                                    "Protection",
                                    "WASH"),
@@ -48,7 +48,7 @@ msni19::radar_graph(df,
                             "protection_index",
                             "wash_index",
                             "impact_index"),
-                    lsg_labels = c("Education in\nEmergency",
+                    lsg_labels = c("Education",
                                    "Emergency Shelter\n& NFI",
                                    "Food Security\n& Agriculture",
                                    "Health",

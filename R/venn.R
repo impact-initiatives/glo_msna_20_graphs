@@ -1,7 +1,7 @@
 # Venn Diesel
 # Installing up-to-date repositories for MSNI calculations/graphs and survey weighting
-remotes::install_github("caldwellst/msni19")
-remotes::install_github("ellieallien/surveyweights")
+remotes::install_github("impact-initiatives/msni19")
+remotes::install_github("impact-initiatives/surveyweights")
 
 # Loading in data frame and sampling frame
 df <- readr::read_csv("data/msna_data.csv")
@@ -27,3 +27,4 @@ msni19::venn_msni(df,
                   weighting_function = weighting_function,
                   print_plot = T,
                   path = "graphs")
+

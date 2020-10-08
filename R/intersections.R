@@ -1,9 +1,10 @@
 # Intersection graph
 # Based on the great work of Eliora for the 2018 MSNAs!
+# Based on the great work of Seth for the 2020 MSNAs!
 # Installing up-to-date repositories for MSNI calculations/graphs and survey weighting
-remotes::install_github("caldwellst/msni19")
-remotes::install_github("ellieallien/surveyweights")
-remotes::install_github("caldwellst/setviz")
+remotes::install_github("impact-initiatives/msni19")
+remotes::install_github("impact-initiatives/surveyweights")
+remotes::install_github("impact-initiatives/Setviz")
 
 # Loading in data frame and sampling frame
 df <- readr::read_csv("data/msna_data.csv")
@@ -37,8 +38,8 @@ p <- msni19::index_intersections(df,
 
 # We print by using the base options for R
 pdf("graphs/intersection.pdf", width = 5, height = 4)
-p
 dev.off()
+p
 
 # There is an error in the UpSetR package that means the last y axis label can be cut off
 # The solution for now will need to be manually adjusting in the InDesign or PDF
