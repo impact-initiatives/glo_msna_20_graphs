@@ -38,8 +38,9 @@ p <- msni19::index_intersections(df,
 
 # We print by using the base options for R
 pdf("graphs/intersection.pdf", width = 5, height = 4)
-dev.off()
 p
+dev.off()
+
 
 # There is an error in the UpSetR package that means the last y axis label can be cut off
 # The solution for now will need to be manually adjusting in the InDesign or PDF
